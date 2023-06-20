@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Sheepmeadow
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Тренировочный проект по написанию сайта разработчика игр с помощью React
 
 ## Available Scripts
 
