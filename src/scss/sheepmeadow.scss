@@ -1,0 +1,15 @@
+@use "template-zero";
+
+.wrapper {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    .main {
+        display: flex;
+        background: url(../sources/img/webb-dark.png) fixed;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+}

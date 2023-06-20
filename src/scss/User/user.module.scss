@@ -1,0 +1,123 @@
+.main__user {
+    margin: var(--padding-large) 0;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.user {
+
+    &__userTop {
+        position: relative;
+        padding: 0 30px;
+        padding-bottom: var(--padding-medium);
+        background-color: var(--accent-color);
+        display: grid;
+        grid-template-areas: "avatar avatar" "nickname online";
+    }
+
+    &__userBot {
+        padding: calc(2 * var(--padding-medium)) 30px; 
+    }
+}
+
+.userTop-avatar {
+    position: relative;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    top: -50%;
+    grid-area: avatar;
+
+    width: 100px;
+    height: 100px;
+
+    img {
+        border-radius: 50%;
+        border: 4px solid white;
+        width: 100%;
+        height: 100%;
+    }
+}
+.userTop-nickname {
+    grid-area: nickname;
+
+    margin-top: calc(var(--padding-medium) * (-0.5));
+
+    span {
+        font-size: 48px;
+        font-weight: 700;
+    }
+}
+.userTop-online {
+    grid-area: online;
+    text-align: end;
+    margin-top: calc(var(--padding-medium) * (-0.5));
+
+    display: flex;  
+    justify-content: end;
+    align-items: end;
+
+    span {
+        position: relative;
+        color: rgb(179, 179, 179);
+        font-size: 24px;
+        font-weight: 700;
+        padding-left: 15px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            top: 10px;
+            left: 0;
+
+            background-color: rgb(179, 179, 179);
+
+        }
+    }
+}
+.userBot {
+    &__stat {
+        display: grid;
+        grid-template-areas: "status messages join";
+        grid-template-columns: 1fr 1fr 1fr;
+        font-size: 24px;
+        padding-bottom: calc( 2 * var(--padding-medium));
+
+        p {
+            font-size: 36px;
+            text-align: center;
+        }
+
+        .statName {
+            font-size: 24px;
+            text-transform: lowercase;
+            color:rgb(179, 179, 179);
+            text-align: center;
+        }
+    }
+
+    &__stat-status {
+        grid-area: status;
+    }
+
+    &__stat-messages {
+        grid-area: messages;
+    }
+
+    &__stat-join {
+        grid-area: join;
+    }
+}
+.userBot-quote {
+    font-size: 36px;
+    text-align: center;
+}
+.quote {
+}
+.copyright {
+    font-size: 36px;
+    color: rgb(179, 179, 179);
+}

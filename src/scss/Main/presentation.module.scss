@@ -1,0 +1,121 @@
+.main__presentation {
+    padding: var(--padding-large) 0;
+    position: relative;
+}
+
+.container_presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1280px !important;
+    margin: 0 auto;
+}
+
+.presentation-sheepmeadow {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 124px;
+    font-weight: 700;
+
+    user-select: none;
+    padding-bottom: 20px;
+
+    span {
+        color: var(--accent-color);
+    }
+}
+
+.presentation__description {
+    position: relative;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;   
+
+    &-textwindow {
+        position: relative;
+        width: 500px;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    &-list {
+        z-index: 1;
+        position: absolute;
+        display: flex;
+        height: 100%;
+
+        transition: 1.5s ease;
+    }
+
+    &-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 500px;
+        height: 100%;
+        span {
+            color: white;
+            display: block;
+            max-width: 300px;
+            text-align: center;
+            font-size: 36px;  
+            line-height: 30px;
+            user-select: none;
+        }
+    }
+
+    &-back {
+        color: var(--accent-color);
+        position: absolute;
+        display: block;
+
+        font-size: 92px;
+        font-weight: 700;
+        font-style: italic;
+        opacity: 50%;
+        text-align: center;
+        text-transform: uppercase;
+
+        user-select: none;
+    }
+
+    &-arrL {
+        z-index: 5;
+        cursor: pointer;
+        align-self: flex-start;
+        display: block;
+        width: 50px;
+        height: 50px;
+
+        opacity: 50%;
+        background: url(../../sources/img/icons/arrowL.png) center / cover;
+        transition: 200ms;
+
+        &:hover {
+            opacity: 100%;
+            transition: 200ms;
+        }
+    }
+
+    &-arrR {
+        z-index: 5;
+        cursor: pointer;
+        align-self: flex-end;
+        display: block;
+        width: 45px;
+        height: 45px;
+
+        opacity: 50%;
+        background: url(../../sources/img/icons/arrowR.png) center / cover;
+        transition: 200ms;
+
+        &:hover {
+            opacity: 100%;
+            transition: 200ms;
+        }
+    }
+}

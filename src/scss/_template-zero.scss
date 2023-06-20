@@ -1,0 +1,86 @@
+@use "global";
+// Include fonts
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+// Zero-style
+$fontfamily: 'Josefin Sans';
+
+$bp1: global.$bp1;
+$bp2: global.$bp2;
+$bp3: global.$bp3;
+// =================
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  
+  *, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  :focus, :active { outline: none; }
+  
+  nav, footer, header, aside {
+    display: block;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 16px;
+    font-family: $fontfamily;
+    color: white;
+    -ms-font-small-adjust: 100%;
+    -moz-font-small-adjust: 100%;
+    -webkit-font-small-adjust: 100%;
+  }
+  
+  input, button, textarea {
+    font-family: inherit;
+  }
+  
+  //IE clear-button
+  input::-ms-clear { display: none; }
+  
+  button { cursor: pointer; }
+  
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+  
+  a { color: inherit; }
+  a, a:visited { text-decoration: none; }
+  a:hover { text-decoration: none; }
+  a:focus, a:active { outline: none; }
+
+  ul li { list-style: none; }
+  
+  img { vertical-align: top; }
+  
+  h1, h2, h3, h4, h5, h6 { font-weight: 400; }
+  
+
+// container max width
+$container-mw: 1680px;
+
+.container {
+    max-width: $container-mw;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    @media (max-width: $bp1) {
+      max-width: 970px;
+    }
+    @media (max-width: $bp2) {
+      max-width: 750px;
+    }
+    @media (max-width: $bp3) {
+      max-width: none; 
+    }
+}

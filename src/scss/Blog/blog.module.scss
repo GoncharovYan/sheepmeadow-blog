@@ -1,0 +1,30 @@
+@use "../additional-values";
+
+.main__blog {
+    background-color: var(--main-color);
+    flex-grow: 1;
+}
+
+
+.title_blog {
+
+    display: flex;
+    justify-content: center;
+    
+    background-color: var(--main-color);
+    border-bottom: 2px solid white;
+
+    h2 {
+        font-size: 72px;
+    }
+
+    margin-bottom: var(--padding-medium);
+    padding: 15px;
+} 
+
+.blog__newswall {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 15px 0;
+}
+
